@@ -1,0 +1,44 @@
+   Copyright {2015} {Pietro Vischia}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+What is this software.
+
+Often, being the Storyteller of a LARP session means having to limit players in some way. This can be in order not to spoil the fun (some elements might break up the fun) or in order not to clog the storyteller's job :D
+
+Specifically, one thing that you may want to do is to prohibit or at least cut down the e-mails flow between characters in the interval between one live session and the other (experimentally, it can arrive to unmanageable levels).
+
+Then you are faced with two solutions: either you just prohibit the usage of in-game emails, or you find an in-game way of severely discouraging it.
+
+I strongly believe the second option is the best.
+
+So, for a vampire chronicle the idea is that someone might be eavesdropping your conversations, under the form of hacking your emails.
+
+This software assigns a probability for each email to be hacked.
+
+- The dots one has in the "Computers" ability make the probability go down.
+- Once one gets hacked, the information will be used by some bad guy. The first time it will be just a warning, the second time typically vampire hunters will hit his character's haven
+
+The software also models the hacking to a character by another character: in this case, the dots in Computers will increase the probability if they pertain to the attacker character, and lower the probability if they come from the defender character.
+
+The starting values are to be tuned, but the idea is the following:
+- base probability of 40% of each email to be intercepted
+- during normal emails use, each dot in Computers removes 3% probability (to model the fact that if you know about computers you use on average more secure ways)
+- if they take special care (they specific some secure method), each dot removes 5% (or 7%, I am testing) possibility of being intercepted
+For the challenges between players, instead,
+- you must have Computers to try to hack (or you have to spend money to contract a Hacker)
+- then, since the attacker has always advantages in these things, then thre is a base probability of X% (I am testing various values, I am oriented towards between 25% and 50%) for the hack to be succesful
+- each dot in computers of the victim brings down the probability by 3% (or 5% if he is taking care). I am testing having only 5% instead of the 3/5%
+- each dot in computers of the attacker brings up the probbility by 5%
